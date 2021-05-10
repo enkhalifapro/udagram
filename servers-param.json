@@ -5,7 +5,7 @@
   },
   {
     "ParameterKey": "KeyPair",
-    "ParameterValue": "kh-pair"
+    "ParameterValue": "ANY-KEY"
   },
   {
     "ParameterKey": "InstanceType",
