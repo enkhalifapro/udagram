@@ -2,5 +2,13 @@
   {
     "ParameterKey": "EnvironmentName",
     "ParameterValue": "kh-UdaGram"
+  },
+  {
+    "ParameterKey": "KeyPair",
+    "ParameterValue": "kh-pair"
+  },
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t3.small"
   }
 ]

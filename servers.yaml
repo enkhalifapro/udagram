@@ -5,6 +5,19 @@ Parameters:
     Description: resource prefix
     Type: String
 
+  KeyPair:
+    Description: Key pair name
+    Type: String
+
+  InstanceType:
+    Description: instance type ex. t2.micro
+    Type: String
+    AllowedValues:
+      - t2.micro
+      - t3.small
+      - m1.small
+      - m1.large
+
 Resources:
   LBSecGroup:
     Type: AWS::EC2::SecurityGroup
@@ -84,10 +97,10 @@ Resources:
           cd /var/www/html
           aws s3 cp s3://kh-udagram/index.html .
       ImageId: ami-0ac73f33a1888c64a
-      KeyName: kh-pair
+      KeyName: !Ref KeyPair
       SecurityGroups:
         - Ref: UdagramSecGroup
-      InstanceType: t2.micro
+      InstanceType: !Ref InstanceType
       BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
           Ebs:
