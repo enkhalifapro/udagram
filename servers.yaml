@@ -14,7 +14,6 @@ Parameters:
     Type: String
     AllowedValues:
       - t2.micro
-      - t3.small
       - m1.small
       - m1.large
 
